@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resource :post_images, only: [:new, :create, :index, :show]
   get 'device/about'
   devise_for :users
   root to: "homes#top"
